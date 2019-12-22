@@ -27,5 +27,28 @@
         </div>
     </div>
 
+    <div th:fragment="display-results">
+        <table class="centeredTable">
+            <tr th:each="job : ${jobs}">
+                <td>
+                    <p>ID</p>
+                    <p>Name</p>
+                    <p>Employer</p>
+                    <p>Location</p>
+                    <p>Position Type</p>
+                    <p>Core Competency</p>
+                </td>
+                <td>
+                    <p th:text="${job.id}"></p>
+                    <p th:text="${job.name}"></p>
+                    <p th:text="${job.employer}"></p>
+                    <p th:text="${job.location}"></p>
+                    <p th:text="${job.positionType}"></p>
+                    <p th:text="${job.coreCompetency}"></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
 </body>
 </html>
